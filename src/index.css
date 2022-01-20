@@ -1,8 +1,25 @@
-.app {
+@import url('https://fonts.googleapis.com/css2?family=New+Rocker&display=swap');
+
+/* REMOVE WHITE SPACE */
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    font-family: 'New Rocker', cursive;
+}
+
+.app 
+{
     text-align: center;
-  }
+}
   
-  .app-header {
+.app-header 
+{
     background-color: #282c34;
     min-height: 100vh;
     display: flex;
@@ -11,4 +28,4 @@
     justify-content: center;
     font-size: calc(10px + 2vmin);
     color: #FFF;
-  }
+}
