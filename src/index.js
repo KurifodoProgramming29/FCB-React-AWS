@@ -17,14 +17,19 @@ function TasksList()
         "Follow Zuitt Coding Bootcamp on Facebook."
     ];
 
+    // <></> THIS IS CALLED 'FRAGMENT'
+    // YOU CAN USED THIS INSTEAD OF <div></div>
     return (
-        <ul>
-            {
-                tasksItemList.map((task, index) => {
-                    return <Task key={ index } taskName={ task }/>
-                })
-            }
-        </ul>
+        <>
+            <input className="task-input"/>
+            <ul>
+                {
+                    tasksItemList.map((task, index) => {
+                        return <Task key={ index } taskName={ task }/>
+                    })
+                }
+            </ul>
+        </>
     );
 }
 
