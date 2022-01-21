@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Task from "./Task";
 
 function TasksList()
@@ -8,11 +9,20 @@ function TasksList()
         "Follow Zuitt Coding Bootcamp on Facebook."
     ];
 
+    const [ taskValue, setTaskValue ] = useState("Just another task");
+    console.log(taskValue);
+
+    const inputChangeHandler = (e) => setTaskValue(e.target.value);
+
     // <></> THIS IS CALLED 'FRAGMENT'
     // YOU CAN USED THIS INSTEAD OF <div></div>
     return (
         <>
-            <input className="task-input"/>
+            <input 
+                className="task-input" 
+                placeholder="Create a new task"
+                onChange={ inputChangeHandler }
+            />
             <ul>
                 {
                     tasksItemList.map((task, index) => {
