@@ -1,37 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-
-function Task(props)
-{
-    return (
-        <li className="tasks-item">{ props.taskName }</li>
-    );
-}
-
-function TasksList()
-{
-    const tasksItemList = [
-        "Follow Edukasyon.ph on Facebook.",
-        "Follow AWS SIklab Pilipinas on Facebook.",
-        "Follow Zuitt Coding Bootcamp on Facebook."
-    ];
-
-    // <></> THIS IS CALLED 'FRAGMENT'
-    // YOU CAN USED THIS INSTEAD OF <div></div>
-    return (
-        <>
-            <input className="task-input"/>
-            <ul>
-                {
-                    tasksItemList.map((task, index) => {
-                        return <Task key={ index } taskName={ task }/>
-                    })
-                }
-            </ul>
-        </>
-    );
-}
+import TasksList from "./components/TaskList";
 
 function App()
 {
